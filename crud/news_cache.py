@@ -80,8 +80,7 @@ async def get_news_detail(db: AsyncSession, news_id: int):
     if cached_news is not None:
         #检查空值占位符，避免构造 ORM 对象时报错
         if await _is_empty_cache(cached_news):
-            return None
-        return News(**cached_news)
+            return News(**cached_news)
 
     # SETNX 互斥锁：缓存未命中时只允许一个请求查数据库，防止击穿
     if await acquire_lock('detail:' + str(news_id)):
