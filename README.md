@@ -91,8 +91,8 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/zkw-zkw/new-sapi.git
-cd new-sapi
+git clone https://github.com/zkw-zkw/news-api-BE.git
+cd news-api-BE
 ```
 ### 2. 创建虚拟环境并安装依赖
 ```bash
